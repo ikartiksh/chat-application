@@ -8,5 +8,8 @@ wss.on('connection', (ws) => {
 
   socket.on("message", (message) => {
     console.log("message received: %s", message.toString());
+    setTimeout(() => {
+       socket.send(message.toString() + ":sent from server"); 
+    }, 1000);
   })
 })
