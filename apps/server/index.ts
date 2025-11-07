@@ -1,3 +1,5 @@
+import { WebSocketServer, WebSocket } from "ws";
+
 const wss = new WebSocketServer({ port: 8080 });
 
 let userCount = 0;
